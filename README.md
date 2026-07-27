@@ -1,11 +1,5 @@
 # filtering_licenses
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
-![Slurm](https://img.shields.io/badge/HPC-Slurm-orange?style=flat-square)
-![JSONL](https://img.shields.io/badge/Data-JSONL-brightgreen?style=flat-square)
-![License](https://img.shields.io/badge/Detected%20licenses-25-blueviolet?style=flat-square)
-![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
-
 Pipeline for detecting licenses and copyright-related content in text corpora stored as JSONL, and for filtering out restrictive or copyrighted documents based on that detection. 
 
 The process is split into two stages, each in its own folder:
