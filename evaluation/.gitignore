@@ -1,0 +1,5 @@
+results/
+*.jsonl
+!finepdfs_test.jsonl
+*.md
+!README.md
