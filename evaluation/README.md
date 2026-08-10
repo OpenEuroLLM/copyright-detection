@@ -1,6 +1,6 @@
 # Evaluation
 
-This folder contains a small gold set and a script to score the filtering pipeline against it.
+This folder contains a small test set based on a FinePDFs dataset sample and a script to score the filtering pipeline against it.
 
 ## Files
 
@@ -9,7 +9,7 @@ This folder contains a small gold set and a script to score the filtering pipeli
 
 ## How to run
 
-1. Run the detector on the gold set to produce predictions with the expected metadata fields:
+1. Run the detector on the test set to produce predictions with the expected metadata fields:
 
 ```bash
 python ../detecting_licenses/detecting_licenses.py finepdfs_test.jsonl predictions.jsonl
