@@ -32,7 +32,7 @@ Takes a JSONL with a `"text"` field and, for each document:
 
 1. Normalizes the text (lowercase, no accents, homogeneous whitespace) to make pattern matching more consistent.
 2. Searches for license patterns (regex) and determines the detected license.
-3. If no license is detected (`unknown`), applies heuristics to estimate whether the text is a book and whether it shows copyright indicators (© symbols, "all rights reserved", a valid ISBN, recent copyright dates, etc.).
+3. If no license is detected (`unknown`), applies document-level heuristics to estimate whether the text is a book and whether it shows copyright indicators. Book detection combines repeated chapter headings, front-matter signals, contextual ISBN metadata, document length, and non-book indicators; a valid-looking ISBN or long text alone is not sufficient.
 4. Classifies the license as `permissive`, `restrictive`, or `unknown`.
 5. Writes the output JSONL adding these fields to each document.
 
