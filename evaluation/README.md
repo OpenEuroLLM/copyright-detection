@@ -9,13 +9,15 @@ This folder contains a small test set based on a FinePDFs dataset sample and a s
 
 ## How to run
 
-1. Run the detector on the test set to produce predictions with the expected metadata fields:
+1. Run the detector as a Slurm job on the test set to produce predictions with the expected metadata fields.
+
+   Use the detector wrapper from `detecting_licenses/` and pass the test file and output path as arguments. If you are not on the BSC paths encoded in that script, adjust the hard-coded locations first or create a small local copy of the job script for the evaluation run.
 
 ```bash
-python ../detecting_licenses/detecting_licenses.py finepdfs_test.jsonl predictions.jsonl
+sbatch ../detecting_licenses/detecting_licenses.sh finepdfs_test.jsonl predictions.jsonl
 ```
 
-2. Evaluate the predictions:
+2. Evaluate the predictions once the Slurm job has finished and written `predictions.jsonl`:
 
 ```bash
 python evaluate_finepdfs_pipeline.py --gold finepdfs_test.jsonl --predictions predictions.jsonl --output-dir results
@@ -30,4 +32,3 @@ The evaluator writes these files into the output directory:
 - `false_positives.jsonl`
 - `false_negatives.jsonl`
 - `all_errors.jsonl`
-
