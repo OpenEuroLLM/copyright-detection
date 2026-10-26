@@ -1,4 +1,4 @@
-# filtering_licenses
+# copyright-detection
 
 Pipeline for detecting licenses and copyright-related content in text corpora stored as JSONL, and for filtering out restrictive or copyrighted documents based on that detection. 
 
