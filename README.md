@@ -145,3 +145,10 @@ Slurm script that launches `orchestrator_filtering.py` as a job, with the input 
 ```
 
 > ⚠️ **Note:** input/output paths and the `#SBATCH` headers (partition, account, qos, time, virtual environment) are set for the BSC cluster environment. If this pipeline is reused elsewhere, those paths and parameters need to be adjusted in the `.sh` scripts.
+
+## Authors
+* **Elisa Forcada** - [GitHub Profile](https://github.com/elisaforcadabsc)
+* **Paula Rivera** - [GitHub Profile](https://github.com/priverabsc)
+
+## License
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
